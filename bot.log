@@ -1,0 +1,40 @@
+2025-08-29 15:07:33,837 - froxtbot.settings - INFO - 🚀 🔍FroxtXOSINT Bot v2.2 starting...
+2025-08-29 15:07:33,838 - froxtbot.settings - INFO - 👑 Admin IDs: [6792765047, 7846896084]
+2025-08-29 15:07:33,838 - froxtbot.settings - INFO - 🔒 Force join channels: ['@yufqxwuyGEN', 'TeamXcodex']
+2025-08-29 15:07:33,838 - froxtbot.settings - INFO - ⚡ Enhanced with pagination and improved error handling
+2025-08-29 15:07:33,838 - froxtbot.settings - INFO - 🛠️ Available tools: 19
+2025-08-29 15:07:33,838 - froxtbot.settings - INFO - 🔬 New tool: Deep Mobile Scan
+2025-08-29 15:07:33,838 - froxtbot.settings - INFO - 📄 Enhanced: Result pagination and file export
+2025-08-29 15:07:33,838 - froxtbot.settings - INFO - 💎 Credit system: Most tools free, Deep Scan premium
+2025-08-29 15:07:34,500 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getMe "HTTP/1.1 200 OK"
+2025-08-29 15:07:34,501 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-29 15:07:34,501 - telegram.ext.Application - INFO - Application started
+2025-08-29 15:07:34,677 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/deleteWebhook "HTTP/1.1 200 OK"
+2025-08-29 15:07:45,346 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:07:55,488 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:08:05,628 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:08:15,767 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:08:25,907 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:08:36,047 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:08:46,188 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:08:56,328 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:02,909 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:03,884 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:09:07,059 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:07,377 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:09:07,378 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=osint_tools
+2025-08-29 15:09:07,378 - froxtbot.settings - ERROR - Error in button_handler: No module named 'utils'
+2025-08-29 15:09:07,705 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:09:11,926 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:12,297 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:09:13,575 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:13,891 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:09:13,892 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=admin_panel
+2025-08-29 15:09:13,893 - froxtbot.settings - ERROR - Error in button_handler: No module named 'utils'
+2025-08-29 15:09:14,221 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:09:23,716 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:33,855 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:43,998 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:09:54,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:10:04,280 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:10:11,403 - froxtbot.settings - INFO - 🛑 Bot stopped by user

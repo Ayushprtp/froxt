@@ -1,0 +1,82 @@
+{
+    "users": {
+        "7846896084": {
+            "id": 7846896084,
+            "username": "MeXCode",
+            "credits": 2.0,
+            "joined_at": "2025-08-29T15:09:02.910597",
+            "referrer": null,
+            "referrals": [],
+            "banned": false,
+            "last_active": "2025-08-29T15:09:02.910604",
+            "total_requests": 0,
+            "daily_requests": 0,
+            "last_request_date": "2025-08-29",
+            "role_id": 1,
+            "cooldown_until": null,
+            "role_expiry_date": null,
+            "last_zc_grant_date": null
+        }
+    },
+    "settings": {
+        "referral_bonus": 0.5,
+        "welcome_bonus": 2.0,
+        "maintenance_mode": false,
+        "max_requests_per_day": 100,
+        "cooldown_period": 10
+    },
+    "stats": {
+        "total_requests": 0,
+        "daily_requests": 0,
+        "successful_requests": 0,
+        "failed_requests": 0,
+        "last_reset": "2025-08-29T13:54:09.831427",
+        "peak_users": 1,
+        "total_credits_distributed": 0
+    },
+    "analytics": {
+        "popular_tools": {},
+        "error_logs": [],
+        "daily_stats": {}
+    },
+    "orders": {},
+    "query_history": [],
+    "roles": {
+        "1": {
+            "role_id": 1,
+            "name": "Free User",
+            "rate_limit": 100,
+            "cooldown": 60,
+            "grants_zc_per_day": 0
+        },
+        "2": {
+            "role_id": 2,
+            "name": "Basic",
+            "rate_limit": 200,
+            "cooldown": 60,
+            "grants_zc_per_day": 10
+        },
+        "3": {
+            "role_id": 3,
+            "name": "Pro",
+            "rate_limit": 500,
+            "cooldown": 15,
+            "grants_zc_per_day": 25
+        },
+        "4": {
+            "role_id": 4,
+            "name": "Elite",
+            "rate_limit": 1000,
+            "cooldown": 3,
+            "grants_zc_per_day": 50
+        },
+        "5": {
+            "role_id": 5,
+            "name": "Admin",
+            "rate_limit": 99999,
+            "cooldown": 0,
+            "grants_zc_per_day": 0
+        }
+    },
+    "version": "2.3"
+}
