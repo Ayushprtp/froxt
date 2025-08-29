@@ -20,6 +20,9 @@ BOT_NAME = "🔍FroxtXOSINT Bot"
 ADMIN_IDS = [6792765047,7846896084]
 FORCE_JOIN_CHANNELS = ["@yufqxwuyGEN","TeamXcodex"]
 
+# Debug Mode
+DEBUG_MODE = True # Set to True to show exact errors, False for user-friendly messages
+
 # Broadcast Channel Configuration
 # IMPORTANT: Replace with the actual numeric ID of your updates channel (e.g., -1001234567890)
 # You can get the channel ID by forwarding a message from the channel to @RawDataBot

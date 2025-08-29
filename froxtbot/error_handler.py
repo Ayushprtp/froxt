@@ -3,7 +3,7 @@ from datetime import datetime
 from telegram import Update
 from telegram.ext import ContextTypes
 from .database.db_management import DatabaseManager
-from .config import logger
+from .config import logger, DEBUG_MODE
 
 async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Handle errors and log them"""
@@ -32,12 +32,20 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE) -> N
     # Try to send error message to user
     if update and isinstance(update, Update) and update.effective_message:
         try:
-            error_id = hashlib.md5(str(context.error).encode()).hexdigest()[:8]
-            await update.effective_message.reply_text(
+            error_message_for_user = (
                 f"❌ System Error\n\n"
                 f"⚠️ An unexpected error occurred. Our team has been notified.\n"
-                f"🔄 Please try again in a few moments.\n\n"
-                f"🆔 Error ID: `{error_id}`",
+                f"🔄 Please try again in a few moments."
+            )
+            
+            if DEBUG_MODE:
+                error_message_for_user += f"\n\n📋 Details: `{context.error}`"
+            else:
+                error_id = hashlib.md5(str(context.error).encode()).hexdigest()[:8]
+                error_message_for_user += f"\n\n🆔 Error ID: `{error_id}`"
+
+            await update.effective_message.reply_text(
+                text=error_message_for_user,
                 parse_mode='Markdown'
             )
         except Exception as e:

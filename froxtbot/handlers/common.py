@@ -11,7 +11,7 @@ from ..utils.formatters import format_response_for_telegram
 from ..utils.keyboards import create_keyboard, create_pagination_keyboard
 from ..utils.pagination import PaginationManager
 from ..utils.join_checker import check_force_join
-from ..config import DEFAULT_API_CONFIG, ADMIN_IDS, logger
+from ..config import DEFAULT_API_CONFIG, ADMIN_IDS, logger, DEBUG_MODE, SERVICES_CONFIG
 from .admin.actions import admin_input_handler
 
 async def handle_pagination(query, context, callback_data):
@@ -149,7 +149,8 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         # Execute the request
         result = await execute_tool_request(selected_tool, input_text)
         
-        if result.get("error"):
+        # Check if the result is an error or an empty list
+        if isinstance(result, dict) and result.get("error"):
             error_msg = (
                 f"❌ Request Failed\n\n"
                 f"🔧 Tool: {selected_tool.replace('_', ' ').title()}\n"
@@ -169,20 +170,26 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
             db["stats"]["failed_requests"] = db["stats"].get("failed_requests", 0) + 1
             await DatabaseManager.save_db(db)
             return
+        
+        # If result is a list and empty, or no meaningful data
+        if not result or (isinstance(result, list) and not any(result)):
+            await context.bot.edit_message_text(
+                chat_id=processing_msg.chat_id,
+                message_id=processing_msg.message_id,
+                text=f"🔍 No results found for your {selected_tool.replace('_', ' ').title()} query."
+            )
+            return
 
         # Deduct credits and update stats
-        # Credits are only deducted if the query is NOT in the exclusion list
         await UserManager.deduct_credits(user_id, selected_tool)
         db = await DatabaseManager.load_db()
         # Get credit costs from the SERVICES configuration
-        services_config = db["api_config"].get("SERVICES", DEFAULT_API_CONFIG["SERVICES"])
-        service_info = services_config.get(selected_tool, {})
+        # SERVICES_CONFIG is already imported from froxtbot.config.services
+        service_info = SERVICES_CONFIG.get(selected_tool, {})
         cost = service_info.get("servicecost", 0)
 
-        # Format response for Telegram with pagination
         formatted_message, file_data, pagination_data = format_response_for_telegram(result, selected_tool)
         
-        # Create success header
         credits_message = f"💎 Credits used: {cost}\n" if cost > 0 else "🆓 Free tool used\n"
         success_header = (
             f"✅ Results Retrieved\n\n"
@@ -191,7 +198,6 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
             f"📊 Data processed successfully\n\n"
         )
 
-        # If we have pagination data, store it in context for navigation
         if pagination_data:
             context.user_data[f"pagination_{selected_tool}"] = {
                 "full_data": result,
@@ -199,11 +205,9 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
                 "current_page": 1
             }
 
-        # If we need to send a file
         if file_data:
             filename, file_content = file_data
             
-            # Update processing message with results and pagination
             pagination_buttons = []
             if pagination_data and pagination_data.get("total_pages", 1) > 1:
                 pagination_buttons = create_pagination_keyboard(
@@ -220,7 +224,6 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
                 reply_markup=create_keyboard(pagination_buttons) if pagination_buttons else None
             )
             
-            # Create and send file
             with open(filename, "w", encoding='utf-8') as f:
                 f.write(file_content)
             
@@ -229,7 +232,7 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
                     await update.message.reply_document(
                         document=f,
                         caption=f"📄 Complete results for {selected_tool.replace('_', ' ')} query\n"
-                               f"📊 Total items: {pagination_data.get('total_items', 'N/A')}",
+                                f"📊 Total items: {pagination_data.get('total_items', 'N/A')}",
                         filename=filename
                     )
                 os.remove(filename)
@@ -237,7 +240,6 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
                 logger.error(f"Error sending file: {e}")
                 await update.message.reply_text(f"⚠️ File creation error: {str(e)}")
         else:
-            # Send normal message with pagination if needed
             pagination_buttons = []
             if pagination_data and pagination_data.get("total_pages", 1) > 1:
                 pagination_buttons = create_pagination_keyboard(
@@ -255,24 +257,32 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
                 reply_markup=create_keyboard(pagination_buttons) if pagination_buttons else None
             )
 
-        # Update successful requests counter
         db = await DatabaseManager.load_db()
         db["stats"]["successful_requests"] = db["stats"].get("successful_requests", 0) + 1
         await DatabaseManager.save_db(db)
 
     except Exception as e:
-        logger.error(f"Error processing {selected_tool}: {e}")
+        logger.error(f"Error processing {selected_tool}: {e}", exc_info=True)
+        
+        error_message_for_user = (
+            f"❌ Processing Error\n\n"
+            f"⚠️ An unexpected error occurred. Our team has been notified.\n"
+            f"🔄 Please try again in a few moments."
+        )
+        
+        if DEBUG_MODE:
+            error_message_for_user += f"\n\n📋 Details: {e}"
+        else:
+            error_message_for_user += f"\n\n🆔 Error ID: {hashlib.md5(str(e).encode()).hexdigest()[:8]}"
+
         await context.bot.edit_message_text(
             chat_id=processing_msg.chat_id,
             message_id=processing_msg.message_id,
-            text=f"❌ Processing Error\n\n"
-            f"⚠️ An unexpected error occurred. Our team has been notified.\n"
-            f"🔄 Please try again in a few moments.\n\n"
-            f"🆔 Error ID: {hashlib.md5(str(e).encode()).hexdigest()[:8]}",
+            text=error_message_for_user,
             parse_mode='Markdown'
         )
         
-        # Log error to database
+        # Log error to database only if not in debug mode to avoid duplicate logging if already handled by error_handler
         db = await DatabaseManager.load_db()
         if "analytics" not in db:
             db["analytics"] = {"error_logs": []}

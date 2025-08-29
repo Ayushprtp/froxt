@@ -25,7 +25,7 @@ from .error_handler import error_handler
 # Import user handlers
 from .handlers.user.start import start
 from .handlers.user.dashboard import dashboard_command
-from .handlers.user.tools import tools_command
+from .handlers.user.tools import tools_command, handle_tool_selection
 from .handlers.user.credits import credits_command
 from .handlers.user.referral import refer_command
 from .handlers.user.shop import buy_command
@@ -43,6 +43,42 @@ from .handlers.user.shop import show_shop_category, show_item_confirmation, hand
 from .handlers.user.exclusion_management import user_exclusion_management_conversation
 from .handlers.common import button_handler, process_input
 from .modules.broadcast_engine import handle_channel_post_broadcast
+
+# Mock classes for handling command aliases that need to simulate callback queries or updates
+class CommandMockMessage:
+    def __init__(self, chat, from_user, text=""):
+        self.chat = chat
+        self.from_user = from_user
+        self.text = text
+        self.message_id = 1 # A placeholder for message_id
+
+    async def reply_text(self, text, reply_markup=None, parse_mode=None):
+        await self.chat.send_message(text=text, reply_markup=reply_markup, parse_mode=parse_mode)
+
+    async def edit_text(self, text, reply_markup=None, parse_mode=None):
+        # When called from a command, edit_message_text should act like reply_text
+        await self.reply_text(text, reply_markup=reply_markup, parse_mode=parse_mode)
+
+class CommandMockQuery:
+    def __init__(self, chat, from_user, tool_name=""):
+        self.from_user = from_user
+        self.message = CommandMockMessage(chat, from_user, "")
+        self.data = f"tool_{tool_name}" if tool_name else ""
+        self.id = "mock_query_id"
+
+    async def answer(self, text=""):
+        # In a command context, query.answer() might just log or do nothing visible to the user.
+        pass
+
+    async def edit_message_text(self, text, reply_markup=None, parse_mode=None):
+        await self.message.edit_text(text, reply_markup=reply_markup, parse_mode=parse_mode)
+
+class CommandMockUpdate:
+    def __init__(self, chat, from_user, text=""):
+        self.effective_chat = chat
+        self.effective_user = from_user
+        self.message = CommandMockMessage(chat, from_user, text)
+        self.callback_query = None
 
 async def check_exclusion_and_process_input(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """
@@ -62,6 +98,57 @@ async def check_exclusion_and_process_input(update: Update, context: ContextType
     # If not an exclusion, proceed with normal input processing
     await process_input(update, context)
 
+async def cmdalias_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """
+    Handles commands dynamically registered from SERVICES_CONFIG cmdalias.
+    Redirects to handle_tool_selection.
+    """
+    full_command = update.effective_message.text
+    command_alias = full_command.split(" ")[0][1:] # e.g., "mobile" from "/mobile 123"
+    input_text = " ".join(context.args) if context.args else ""
+
+    service_name_found = None
+    for service_name, service_info in SERVICES_CONFIG.items():
+        if service_info.get("cmdalias") == command_alias:
+            service_name_found = service_name
+            break
+
+    if not service_name_found:
+        await update.effective_message.reply_text(f"❌ Unknown command alias: `{command_alias}`")
+        return
+
+    if input_text:
+        # Directly process the input
+        context.user_data["selected_tool"] = service_name_found
+        
+        # Create a mock update object to pass to process_input
+        mock_update_for_process = CommandMockUpdate(update.effective_chat, update.effective_user, input_text)
+        
+        # Call process_input with the mock update
+        await process_input(mock_update_for_process, context)
+        
+    else:
+        # No input provided, show prompt
+        mock_query = CommandMockQuery(update.effective_chat, update.effective_user, tool_name=service_name_found)
+        await handle_tool_selection(mock_query, context, service_name_found)
+
+
+async def cmdlist_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """
+    Sends a message listing all available command aliases from SERVICES_CONFIG.
+    """
+    aliases = []
+    for service_name, service_info in SERVICES_CONFIG.items():
+        if "cmdalias" in service_info:
+            aliases.append(f"/{service_info['cmdalias']} - {service_info.get('servicename', service_name.replace('_', ' ').title())}")
+    
+    if aliases:
+        message = "✨ Available Command Aliases ✨\n\n" + "\n".join(aliases)
+    else:
+        message = "😞 No command aliases currently available."
+        
+    await update.message.reply_text(message)
+
 def register_handlers(application: Application) -> None:
     """Registers all command, message, and callback query handlers."""
     # Add command handlers
@@ -75,10 +162,16 @@ def register_handlers(application: Application) -> None:
     application.add_handler(CommandHandler("help", help_command))
     application.add_handler(CommandHandler("stats", stats_command))
     application.add_handler(CommandHandler("balance", balance_command))
+    application.add_handler(CommandHandler("cmdlist", cmdlist_command)) # Add new cmdlist command
     
+    # Dynamically add command handlers for each cmdalias
+    for service_name, service_info in SERVICES_CONFIG.items():
+        if "cmdalias" in service_info:
+            application.add_handler(CommandHandler(service_info["cmdalias"], cmdalias_handler))
+
     # Admin-only commands
     application.add_handler(CommandHandler("admin", admin_command, filters.User(ADMIN_IDS)))
-    application.add_handler(CommandHandler("reload", reload_bot, filters.User(ADMIN_IDS))) # New reload command
+    application.add_handler(CommandHandler("reload", reload_bot, filters.User(ADMIN_IDS)))
 
     # Add conversation handlers
     application.add_handler(user_management_conversation)
@@ -159,7 +252,15 @@ async def main() -> None:
     await ensure_exclusion_slot_shop_item_exists() # Added await here
     
     # Create application
-    application = Application.builder().token(BOT_TOKEN).build()
+    application = (
+        Application.builder()
+        .token(BOT_TOKEN)
+        .pool_timeout(20)
+        .read_timeout(30)
+        .write_timeout(30)
+        .connect_timeout(30)
+        .build()
+    )
 
     # Register handlers
     register_handlers(application)

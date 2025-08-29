@@ -74,9 +74,9 @@ async def target_selected_handler(update: Update, context: ContextTypes.DEFAULT_
     """Handles the target audience selection."""
     query = update.callback_query
     await query.answer()
-    target_role_id = int(query.data.split('_')[-1]) # Assuming callback data is like broadcast_target_<role_id>
-    context.user_data['broadcast_target_role_id'] = target_role_id
-
+    target_id_str = query.data.split('_')[-1]
+    context.user_data['broadcast_target_id'] = target_id_str
+    
     broadcast_message: Message = context.user_data['broadcast_message']
     
     # Preview
@@ -87,17 +87,21 @@ async def target_selected_handler(update: Update, context: ContextTypes.DEFAULT_
         message_id=broadcast_message.message_id
     )
     
-    role = await UserManager.get_role_by_id(target_role_id)
-    role_name = role["name"] if role else "Unknown Role"
+    if target_id_str == "0":
+        target_name = "Everyone"
+    else:
+        role = await UserManager.get_role_by_id(int(target_id_str))
+        target_name = role["name"] if role else "Unknown Role"
 
     keyboard = build_broadcast_confirmation_menu()
     await context.bot.send_message(
         chat_id=query.message.chat_id,
-        text=f"Confirm broadcast to **{role_name}** users?",
+        text=f"Confirm broadcast to **{target_name}** users?",
         reply_markup=keyboard,
         parse_mode='Markdown'
     )
     return AWAIT_CONFIRMATION
+
 
 async def confirmation_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     """Handles the final broadcast confirmation."""
@@ -105,21 +109,28 @@ async def confirmation_handler(update: Update, context: ContextTypes.DEFAULT_TYP
     await query.answer()
     
     if query.data == "broadcast_confirm_yes":
-        target_role_id = context.user_data['broadcast_target_role_id']
+        target_id_str = context.user_data['broadcast_target_id']
         broadcast_message = context.user_data['broadcast_message']
         
-        await query.edit_message_text(text=f"Fetching users for role ID: {target_role_id}...")
+        await query.edit_message_text(text=f"Fetching users for target: {target_id_str}...")
         
-        # Get user IDs for the target role
-        db = await DatabaseManager.load_db()
-        user_ids = [int(uid) for uid, udata in db["users"].items() if udata.get("role_id") == target_role_id]
-        
+        user_ids = []
+        if target_id_str == "0": # Broadcast to everyone
+            user_ids = await UserManager.get_all_user_ids()
+            target_name = "Everyone"
+        else:
+            target_role_id = int(target_id_str)
+            db = await DatabaseManager.load_db()
+            user_ids = [int(uid) for uid, udata in db["users"].items() if udata.get("role_id") == target_role_id]
+            role = await UserManager.get_role_by_id(target_role_id)
+            target_name = role["name"] if role else "Unknown Role"
+            
         if not user_ids:
-            await query.edit_message_text(text="No users found for the selected role. Broadcast cancelled.")
+            await query.edit_message_text(text=f"No users found for {target_name}. Broadcast cancelled.")
             context.user_data.clear()
             return ConversationHandler.END
 
-        await query.edit_message_text(text=f"Starting broadcast to {len(user_ids)} users...")
+        await query.edit_message_text(text=f"Starting broadcast to {len(user_ids)} users ({target_name})...")
         
         success_count, fail_count = await send_broadcast(context.bot, user_ids, broadcast_message)
         
@@ -144,6 +155,16 @@ async def cancel_broadcast(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     else:
         await update.message.reply_text(text="Broadcast creation cancelled.")
     context.user_data.clear()
+    await show_admin_panel(query if query else update.message)
+    return ConversationHandler.END
+
+async def back_to_admin_panel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
+    """Wrapper to return to the admin panel."""
+    query = update.callback_query
+    if query:
+        await query.answer()
+    await show_admin_panel(query if query else update.message)
+    context.user_data.clear()
     return ConversationHandler.END
 
 def broadcast_conversation_handler() -> ConversationHandler:
@@ -151,15 +172,15 @@ def broadcast_conversation_handler() -> ConversationHandler:
     return ConversationHandler(
         entry_points=[CallbackQueryHandler(new_broadcast_start, pattern="^broadcast_new$")],
         states={
-            AWAIT_BROADCAST_MESSAGE: [MessageHandler(filters.ALL & filters.User(ADMIN_IDS), message_received_handler)],
-            AWAIT_TARGET_SELECTION: [CallbackQueryHandler(target_selected_handler, pattern="^broadcast_target_$")],
-            AWAIT_CONFIRMATION: [CallbackQueryHandler(confirmation_handler, pattern="^broadcast_confirm_$")],
+            AWAIT_BROADCAST_MESSAGE: [MessageHandler(filters.ALL & ~filters.COMMAND & filters.User(ADMIN_IDS), message_received_handler)],
+            AWAIT_TARGET_SELECTION: [CallbackQueryHandler(target_selected_handler, pattern="^broadcast_target_")],
+            AWAIT_CONFIRMATION: [CallbackQueryHandler(confirmation_handler, pattern="^broadcast_confirm_")],
         },
         fallbacks=[
             CallbackQueryHandler(cancel_broadcast, pattern="^broadcast_cancel$"),
             CommandHandler("start", cancel_broadcast),
             CommandHandler("cancel", cancel_broadcast),
-            CallbackQueryHandler(show_admin_panel, pattern="^admin_panel$"), # Allow returning to admin panel
+            CallbackQueryHandler(back_to_admin_panel, pattern="^admin_panel$"), # Allow returning to admin panel
         ],
         map_to_parent={
              ConversationHandler.END: -1

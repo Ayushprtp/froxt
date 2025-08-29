@@ -38,7 +38,7 @@ async def _get_user_display_text(user_id: int) -> str:
     if user:
         return (
             f"Managing {user['full_name']} (@{user['username'] or 'N/A'})\n"
-            f"ID: {user['user_id']}\n"
+            f"ID: {user['id']}\n"
             f"Role: {user['role']}\n"
             f"ZC Balance: {user['zc_balance']}"
         )

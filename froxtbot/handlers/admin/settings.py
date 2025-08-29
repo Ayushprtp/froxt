@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from ...database.db_management import DatabaseManager
 from ...utils.keyboards import create_keyboard
-from ...config import ADMIN_IDS, FORCE_JOIN_CHANNELS, BOT_NAME
+from ...config import ADMIN_IDS, FORCE_JOIN_CHANNELS, BOT_NAME, SERVICES_CONFIG
 
 async def handle_admin_settings(query):
     """Handle system settings"""

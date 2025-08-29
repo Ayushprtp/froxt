@@ -108,19 +108,31 @@ def build_broadcast_menu() -> InlineKeyboardMarkup:
     """Builds the main broadcast menu."""
     keyboard_buttons = [
         [{"text": "➕ New Broadcast", "callback_data": "broadcast_new", "style": "primary"}],
-        [{"text": "🔙 Back to Admin", "callback_data": "admin_panel", "style": "secondary"}]
+        [{"text": "🔙 Back", "callback_data": "admin_panel", "style": "secondary"}]
     ]
     return create_keyboard(keyboard_buttons)
 
 def build_broadcast_target_menu(roles: List[Dict]) -> InlineKeyboardMarkup:
-    """Builds a menu for selecting broadcast target roles."""
+    """Builds a menu for selecting broadcast target roles with an 'Everyone' option."""
     keyboard_buttons = []
-    for role in roles:
-        keyboard_buttons.append([
-            {"text": role["name"], "callback_data": f"broadcast_target_{role['role_id']}", "style": "info"}
-        ])
+    
+    # Add "Everyone" option
     keyboard_buttons.append([
-        {"text": "❌ Cancel", "callback_data": "broadcast_cancel", "style": "secondary"}
+        {"text": "👥 Everyone (All Users)", "callback_data": "broadcast_target_0", "style": "primary"} # role_id 0 for everyone
+    ])
+
+    # Add roles in rows of two
+    current_row = []
+    for role in roles:
+        current_row.append({"text": role["name"], "callback_data": f"broadcast_target_{role['role_id']}", "style": "info"})
+        if len(current_row) == 2:
+            keyboard_buttons.append(current_row)
+            current_row = []
+    if current_row: # Add any remaining button
+        keyboard_buttons.append(current_row)
+
+    keyboard_buttons.append([
+        {"text": "❌ Cancel Broadcast", "callback_data": "broadcast_cancel", "style": "secondary"}
     ])
     return create_keyboard(keyboard_buttons)
 

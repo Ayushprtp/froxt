@@ -17,7 +17,7 @@ SERVICES_CONFIG: Dict[str, Dict[str, Any]] = {
         "servicename": "Mobile Lookup",
         "servicecost": 0,
         "servicebeautify": "📱 Mobile Lookup",
-        "serviceapi": "https://numinfoapi.zerovault.workers.dev/search/mobile?value=",
+        "serviceapi": "https://numinfoapi.zerovault.workers.dev/search/mobile?key=codex&value=",
         "cmdalias": "mobile",
         "input_prompt": "📱 Enter mobile number (with or without country code)",
         "enabled": True

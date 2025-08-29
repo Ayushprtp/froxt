@@ -9,11 +9,11 @@
             "referrals": [],
             "banned": false,
             "last_active": "2025-08-29T15:09:02.910604",
-            "total_requests": 0,
-            "daily_requests": 0,
+            "total_requests": 4,
+            "daily_requests": 4,
             "last_request_date": "2025-08-29",
             "role_id": 1,
-            "cooldown_until": null,
+            "cooldown_until": "2025-08-29T16:43:53.417318",
             "role_expiry_date": null,
             "last_zc_grant_date": null
         }
@@ -26,16 +26,18 @@
         "cooldown_period": 10
     },
     "stats": {
-        "total_requests": 0,
-        "daily_requests": 0,
-        "successful_requests": 0,
-        "failed_requests": 1,
+        "total_requests": 4,
+        "daily_requests": 4,
+        "successful_requests": 1,
+        "failed_requests": 2,
         "last_reset": "2025-08-29T13:54:09.831427",
         "peak_users": 1,
         "total_credits_distributed": 0
     },
     "analytics": {
-        "popular_tools": {},
+        "popular_tools": {
+            "mobile": 4
+        },
         "error_logs": [
             {
                 "timestamp": "2025-08-29T15:19:42.948145",
@@ -66,12 +68,83 @@
                 "error_type": "KeyError",
                 "error_message": "'user_id'",
                 "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T15:49:08.837401",
+                "error_type": "TypeError",
+                "error_message": "show_admin_panel() takes 1 positional argument but 2 were given",
+                "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T15:49:12.290085",
+                "error_type": "TypeError",
+                "error_message": "show_admin_panel() takes 1 positional argument but 2 were given",
+                "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T15:49:14.848711",
+                "error_type": "TypeError",
+                "error_message": "show_admin_panel() takes 1 positional argument but 2 were given",
+                "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T16:05:01.177891",
+                "user_id": 7846896084,
+                "tool": "mobile",
+                "error": "'list' object has no attribute 'get'",
+                "input_hash": "f1b708bba17f1ce948dc979f4d7092bc"
+            },
+            {
+                "timestamp": "2025-08-29T16:08:00.370376",
+                "user_id": 7846896084,
+                "tool": "mobile",
+                "error": "'api_config'",
+                "input_hash": "f1b708bba17f1ce948dc979f4d7092bc"
+            },
+            {
+                "timestamp": "2025-08-29T16:10:22.776995",
+                "user_id": 7846896084,
+                "tool": "mobile",
+                "error": "name 'SERVICES_CONFIG' is not defined",
+                "input_hash": "f1b708bba17f1ce948dc979f4d7092bc"
+            },
+            {
+                "timestamp": "2025-08-29T16:14:24.553332",
+                "user_id": 7846896084,
+                "tool": "mobile",
+                "error": "name 'SERVICES_CONFIG' is not defined",
+                "input_hash": "9696b8bf63aa6ff877af6e4c1b60e0a5"
             }
         ],
         "daily_stats": {}
     },
     "orders": {},
-    "query_history": [],
+    "query_history": [
+        {
+            "user_id": 7846896084,
+            "service_name": "mobile",
+            "query_text": "N/A",
+            "timestamp": "2025-08-29T16:07:59.963250"
+        },
+        {
+            "user_id": 7846896084,
+            "service_name": "mobile",
+            "query_text": "N/A",
+            "timestamp": "2025-08-29T16:10:22.383367"
+        },
+        {
+            "user_id": 7846896084,
+            "service_name": "mobile",
+            "query_text": "N/A",
+            "timestamp": "2025-08-29T16:14:24.167165"
+        },
+        {
+            "user_id": 7846896084,
+            "service_name": "mobile",
+            "query_text": "N/A",
+            "timestamp": "2025-08-29T16:42:53.417334"
+        }
+    ],
     "roles": {
         "1": {
             "role_id": 1,
