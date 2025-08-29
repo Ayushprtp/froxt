@@ -38,3 +38,65 @@
 2025-08-29 15:09:54,137 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
 2025-08-29 15:10:04,280 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
 2025-08-29 15:10:11,403 - froxtbot.settings - INFO - 🛑 Bot stopped by user
+2025-08-29 15:18:07,112 - froxtbot.settings - INFO - 🚀 🔍FroxtXOSINT Bot v2.2 starting...
+2025-08-29 15:18:07,113 - froxtbot.settings - INFO - 👑 Admin IDs: [6792765047, 7846896084]
+2025-08-29 15:18:07,113 - froxtbot.settings - INFO - 🔒 Force join channels: ['@yufqxwuyGEN', 'TeamXcodex']
+2025-08-29 15:18:07,113 - froxtbot.settings - INFO - ⚡ Enhanced with pagination and improved error handling
+2025-08-29 15:18:07,113 - froxtbot.settings - INFO - 🛠️ Available tools: 19
+2025-08-29 15:18:07,113 - froxtbot.settings - INFO - 🔬 New tool: Deep Mobile Scan
+2025-08-29 15:18:07,113 - froxtbot.settings - INFO - 📄 Enhanced: Result pagination and file export
+2025-08-29 15:18:07,113 - froxtbot.settings - INFO - 💎 Credit system: Most tools free, Deep Scan premium
+2025-08-29 15:18:07,797 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getMe "HTTP/1.1 200 OK"
+2025-08-29 15:18:07,798 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-29 15:18:07,798 - telegram.ext.Application - INFO - Application started
+2025-08-29 15:18:07,935 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/deleteWebhook "HTTP/1.1 200 OK"
+2025-08-29 15:18:18,598 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:18:28,741 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:18:38,879 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:18:49,016 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:18:59,153 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:09,291 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:14,469 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:15,398 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:19:16,537 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:16,860 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:19:16,860 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=osint_tools
+2025-08-29 15:19:17,200 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:19:19,240 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:19,565 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:19:19,565 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=tool_mobile
+2025-08-29 15:19:19,901 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:19:26,553 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:27,497 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:19:27,498 - froxtbot.settings - INFO - Making mobile request for: 0000000000
+2025-08-29 15:19:28,903 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:19:36,125 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:36,981 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:19:37,944 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:38,256 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:19:38,256 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=admin_panel
+2025-08-29 15:19:38,586 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:19:40,466 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:40,778 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:19:41,110 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:19:42,618 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:19:42,941 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:19:42,943 - froxtbot.settings - ERROR - Update Update(callback_query=CallbackQuery(chat_instance='4368579571786063283', data='admin_user_select_7846896084', from_user=User(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, is_bot=False, language_code='en', username='MeXCode'), id='6032045948203536462', message=Message(channel_chat_created=False, chat=Chat(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, type=<ChatType.PRIVATE>, username='MeXCode'), date=datetime.datetime(2025, 8, 29, 15, 19, 36, tzinfo=datetime.timezone.utc), delete_chat_photo=False, edit_date=datetime.datetime(2025, 8, 29, 15, 19, 40, tzinfo=datetime.timezone.utc), from_user=User(first_name='Baba X Tillu', id=8374407374, is_bot=True, username='BabaXTilluBot'), group_chat_created=False, message_id=82, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='admin_user_select_7846896084', text='ℹ️ 🟢 MeXCode (Free User)'),), (InlineKeyboardButton(callback_data='noop', text='ℹ️ 1/1'),), (InlineKeyboardButton(callback_data='admin_user_search', text='🔹 🔍 Search User'), InlineKeyboardButton(callback_data='admin_panel', text='▫️ 🔙 Back to Admin')))), supergroup_chat_created=False, text='👥 **User Management**')), update_id=494417188) caused error 'user_id'
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_application.py", line 1311, in process_update
+    await coroutine
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/conversationhandler.py", line 842, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/admin/user_management.py", line 83, in view_user
+    await _get_user_display_text(user_id),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/admin/user_management.py", line 41, in _get_user_display_text
+    f"ID: {user['user_id']}\n"
+           ~~~~^^^^^^^^^^^
+KeyError: 'user_id'
+2025-08-29 15:19:43,361 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:19:52,758 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"

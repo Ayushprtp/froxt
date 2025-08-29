@@ -1,5 +1,23 @@
 {
-    "users": {},
+    "users": {
+        "7846896084": {
+            "id": 7846896084,
+            "username": "MeXCode",
+            "credits": 2.0,
+            "joined_at": "2025-08-29T15:09:02.910597",
+            "referrer": null,
+            "referrals": [],
+            "banned": false,
+            "last_active": "2025-08-29T15:09:02.910604",
+            "total_requests": 0,
+            "daily_requests": 0,
+            "last_request_date": "2025-08-29",
+            "role_id": 1,
+            "cooldown_until": null,
+            "role_expiry_date": null,
+            "last_zc_grant_date": null
+        }
+    },
     "settings": {
         "referral_bonus": 0.5,
         "welcome_bonus": 2.0,
@@ -11,9 +29,9 @@
         "total_requests": 0,
         "daily_requests": 0,
         "successful_requests": 0,
-        "failed_requests": 0,
+        "failed_requests": 1,
         "last_reset": "2025-08-29T13:54:09.831427",
-        "peak_users": 0,
+        "peak_users": 1,
         "total_credits_distributed": 0
     },
     "analytics": {

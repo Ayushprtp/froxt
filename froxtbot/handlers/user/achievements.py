@@ -1,5 +1,5 @@
-from database.db_users import UserManager
-from utils.keyboards import create_keyboard
+from ...database.db_users import UserManager
+from ...utils.keyboards import create_keyboard
 
 async def show_achievements(query):
     """Show user achievements"""

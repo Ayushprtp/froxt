@@ -1,4 +1,4 @@
-from utils.keyboards import create_keyboard
+from ...utils.keyboards import create_keyboard
 
 async def show_upi_services(query):
     """Show UPI-related services"""

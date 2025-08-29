@@ -255,4 +255,5 @@ credit_management_conversation = ConversationHandler(
         CommandHandler("start", end_credit_conversation),
     ],
     map_to_parent={ConversationHandler.END: -1},
+    per_message=True,
 )

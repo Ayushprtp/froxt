@@ -1,9 +1,9 @@
 from datetime import datetime
-from database.db_users import UserManager
-from database.db_history import get_user_query_history
-from database.db_management import DatabaseManager
-from utils.keyboards import create_keyboard, create_pagination_keyboard
-from utils.pagination import PaginationManager
+from ...database.db_users import UserManager
+from ...database.db_history import get_user_query_history
+from ...database.db_management import DatabaseManager
+from ...utils.keyboards import create_keyboard, create_pagination_keyboard
+from ...utils.pagination import PaginationManager
 from ...config import DEFAULT_API_CONFIG
 
 async def show_usage_history(query, context, page: int = 1):

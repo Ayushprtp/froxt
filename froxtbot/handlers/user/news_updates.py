@@ -1,4 +1,4 @@
-from utils.keyboards import create_keyboard
+from ...utils.keyboards import create_keyboard
 
 async def show_news_updates(query):
     """Show news and updates"""

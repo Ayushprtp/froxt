@@ -163,5 +163,6 @@ def broadcast_conversation_handler() -> ConversationHandler:
         ],
         map_to_parent={
              ConversationHandler.END: -1
-        }
+        },
+        per_message=True,
     )

@@ -29,14 +29,21 @@
         "total_requests": 0,
         "daily_requests": 0,
         "successful_requests": 0,
-        "failed_requests": 0,
+        "failed_requests": 1,
         "last_reset": "2025-08-29T13:54:09.831427",
         "peak_users": 1,
         "total_credits_distributed": 0
     },
     "analytics": {
         "popular_tools": {},
-        "error_logs": [],
+        "error_logs": [
+            {
+                "timestamp": "2025-08-29T15:19:42.948145",
+                "error_type": "KeyError",
+                "error_message": "'user_id'",
+                "update_type": "Update"
+            }
+        ],
         "daily_stats": {}
     },
     "orders": {},
