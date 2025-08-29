@@ -1051,3 +1051,16 @@ telegram.error.NetworkError: httpx.ReadError:
 2025-08-29 16:43:00,900 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
 2025-08-29 16:43:11,041 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
 2025-08-29 16:43:13,030 - froxtbot.settings - INFO - 🛑 Bot stopped by user
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - 🚀 🔍FroxtXOSINT Bot v2.2 starting...
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - 👑 Admin IDs: [6792765047, 7846896084]
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - 🔒 Force join channels: ['@yufqxwuyGEN', 'TeamXcodex']
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - ⚡ Enhanced with pagination and improved error handling
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - 🛠️ Available tools: 19
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - 🔬 New tool: Deep Mobile Scan
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - 📄 Enhanced: Result pagination and file export
+2025-08-29 17:38:19,150 - froxtbot.settings - INFO - 💎 Credit system: Most tools free, Deep Scan premium
+2025-08-29 17:38:19,821 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getMe "HTTP/1.1 200 OK"
+2025-08-29 17:38:19,822 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-29 17:38:19,822 - telegram.ext.Application - INFO - Application started
+2025-08-29 17:38:19,961 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/deleteWebhook "HTTP/1.1 200 OK"
+2025-08-29 17:38:22,927 - froxtbot.settings - INFO - 🛑 Bot stopped by user

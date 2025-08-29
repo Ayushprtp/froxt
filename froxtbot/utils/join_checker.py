@@ -4,6 +4,11 @@ from ..config import ADMIN_IDS, FORCE_JOIN_CHANNELS, logger
 from .keyboards import create_button, create_keyboard
 
 async def check_force_join(update: Update, context: ContextTypes.DEFAULT_TYPE) -> bool:
+    # Check if effective_user exists
+    if not update.effective_user:
+        logger.warning("Update object doesn't have effective_user attribute")
+        return False
+        
     user_id = update.effective_user.id
     if user_id in ADMIN_IDS:
         return True

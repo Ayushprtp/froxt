@@ -16,7 +16,7 @@ async def show_buy_credits(query):
 
     buttons = []
     if categorized_items["ZC Pack"]:
-        buttons.append([{"text": "💰 ZC Packs", "callback_data": "shop_category_zc", "style": "info"}])
+        buttons.append([{"text": "💰 Credit Packs", "callback_data": "shop_category_credits", "style": "info"}])
     if categorized_items["Membership"]:
         buttons.append([{"text": "👑 Memberships", "callback_data": "shop_category_membership", "style": "info"}])
     if categorized_items["Exclusion Slot"]:
@@ -34,11 +34,11 @@ async def show_buy_credits(query):
 async def show_shop_category(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
-    category = query.data.split('_')[-1] # 'zc', 'membership', or 'exclusion_slot'
+    category = query.data.split('_')[-1] # 'credits', 'membership', or 'exclusion_slot'
 
     categorized_items = await db_shop.get_all_shop_items()
     
-    display_category_name = category.replace('zc', 'ZC Packs').replace('membership', 'Memberships').replace('exclusion_slot', 'Exclusion Slots')
+    display_category_name = category.replace('credits', 'ZC Pack').replace('membership', 'Memberships').replace('exclusion_slot', 'Exclusion Slots')
     items_in_category = categorized_items.get(display_category_name, [])
 
     if not items_in_category:

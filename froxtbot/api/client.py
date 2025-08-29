@@ -41,12 +41,34 @@ class APIManager:
                             else:
                                 return {"error": f"HTTP {response.status}", "message": await response.text()}
                                 
-                except (aiohttp.ClientError, asyncio.TimeoutError) as e:
+                except aiohttp.ClientConnectorError as e:
+                    logger.error(f"Connection error for {url}: {e}")
+                    if attempt == max_retries - 1:
+                        return {"error": "Connection failed", "message": str(e), "attempt": attempt + 1}
+                    await asyncio.sleep(retry_delay)
+                except aiohttp.ClientTimeoutError as e:
+                    logger.warning(f"Request timeout for {url}, attempt {attempt + 1}/{max_retries}")
+                    if attempt == max_retries - 1:
+                        return {"error": "Request timeout", "message": str(e), "attempt": attempt + 1}
+                    await asyncio.sleep(retry_delay)
+                except aiohttp.ClientResponseError as e:
+                    logger.error(f"HTTP error for {url}: {e.status} - {e.message}")
+                    return {"error": f"HTTP {e.status}", "message": e.message}
+                except aiohttp.ClientError as e:
+                    logger.error(f"Client error for {url}: {e}")
                     if attempt == max_retries - 1:
                         return {"error": "API request failed", "message": str(e), "attempt": attempt + 1}
                     await asyncio.sleep(retry_delay)
+                except asyncio.TimeoutError as e:
+                    logger.warning(f"Async timeout for {url}, attempt {attempt + 1}/{max_retries}")
+                    if attempt == max_retries - 1:
+                        return {"error": "Request timeout", "message": str(e), "attempt": attempt + 1}
+                    await asyncio.sleep(retry_delay)
                 except Exception as e:
-                    return {"error": "Unexpected error", "message": str(e)}
+                    logger.error(f"Unexpected error for {url}: {e}")
+                    if attempt == max_retries - 1:
+                        return {"error": "Unexpected error", "message": str(e), "attempt": attempt + 1}
+                    await asyncio.sleep(retry_delay)
         
         return {"error": "Max retries reached"}
 

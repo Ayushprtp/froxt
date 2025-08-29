@@ -181,7 +181,7 @@ async def process_input(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
             return
 
         # Deduct credits and update stats
-        await UserManager.deduct_credits(user_id, selected_tool)
+        await UserManager.deduct_credits(user_id, selected_tool, input_text)
         db = await DatabaseManager.load_db()
         # Get credit costs from the SERVICES configuration
         # SERVICES_CONFIG is already imported from froxtbot.config.services
