@@ -265,5 +265,4 @@ user_management_conversation = ConversationHandler(
         CommandHandler("start", end_conversation),
     ],
     map_to_parent={ConversationHandler.END: -1},
-    per_message=True,
 )

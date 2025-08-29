@@ -42,6 +42,30 @@
                 "error_type": "KeyError",
                 "error_message": "'user_id'",
                 "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T15:23:48.078456",
+                "error_type": "KeyError",
+                "error_message": "'user_id'",
+                "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T15:23:55.711544",
+                "error_type": "NetworkError",
+                "error_message": "httpx.ReadError: ",
+                "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T15:34:31.844981",
+                "error_type": "NetworkError",
+                "error_message": "httpx.ReadError: ",
+                "update_type": "Update"
+            },
+            {
+                "timestamp": "2025-08-29T15:35:20.649018",
+                "error_type": "KeyError",
+                "error_message": "'user_id'",
+                "update_type": "Update"
             }
         ],
         "daily_stats": {}

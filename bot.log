@@ -100,3 +100,451 @@ Traceback (most recent call last):
 KeyError: 'user_id'
 2025-08-29 15:19:43,361 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
 2025-08-29 15:19:52,758 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:20:02,896 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:20:13,034 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:20:15,706 - froxtbot.settings - INFO - 🛑 Bot stopped by user
+2025-08-29 15:23:26,954 - froxtbot.settings - INFO - 🚀 🔍FroxtXOSINT Bot v2.2 starting...
+2025-08-29 15:23:26,954 - froxtbot.settings - INFO - 👑 Admin IDs: [6792765047, 7846896084]
+2025-08-29 15:23:26,954 - froxtbot.settings - INFO - 🔒 Force join channels: ['@yufqxwuyGEN', 'TeamXcodex']
+2025-08-29 15:23:26,954 - froxtbot.settings - INFO - ⚡ Enhanced with pagination and improved error handling
+2025-08-29 15:23:26,954 - froxtbot.settings - INFO - 🛠️ Available tools: 19
+2025-08-29 15:23:26,955 - froxtbot.settings - INFO - 🔬 New tool: Deep Mobile Scan
+2025-08-29 15:23:26,955 - froxtbot.settings - INFO - 📄 Enhanced: Result pagination and file export
+2025-08-29 15:23:26,955 - froxtbot.settings - INFO - 💎 Credit system: Most tools free, Deep Scan premium
+2025-08-29 15:23:27,651 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getMe "HTTP/1.1 200 OK"
+2025-08-29 15:23:27,652 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-29 15:23:27,652 - telegram.ext.Application - INFO - Application started
+2025-08-29 15:23:27,798 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/deleteWebhook "HTTP/1.1 200 OK"
+2025-08-29 15:23:38,452 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:40,254 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:41,133 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:23:42,284 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:42,606 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:23:42,606 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=admin_panel
+2025-08-29 15:23:42,942 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:23:46,024 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:46,374 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:23:46,713 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:23:47,737 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:48,074 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:23:48,077 - froxtbot.settings - ERROR - Update Update(callback_query=CallbackQuery(chat_instance='4368579571786063283', data='admin_user_select_7846896084', from_user=User(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, is_bot=False, language_code='en', username='MeXCode'), id='6032045948839350635', message=Message(channel_chat_created=False, chat=Chat(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, type=<ChatType.PRIVATE>, username='MeXCode'), date=datetime.datetime(2025, 8, 29, 15, 23, 40, tzinfo=datetime.timezone.utc), delete_chat_photo=False, edit_date=datetime.datetime(2025, 8, 29, 15, 23, 46, tzinfo=datetime.timezone.utc), from_user=User(first_name='Baba X Tillu', id=8374407374, is_bot=True, username='BabaXTilluBot'), group_chat_created=False, message_id=85, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='admin_user_select_7846896084', text='ℹ️ 🟢 MeXCode (Free User)'),), (InlineKeyboardButton(callback_data='noop', text='ℹ️ 1/1'),), (InlineKeyboardButton(callback_data='admin_user_search', text='🔹 🔍 Search User'), InlineKeyboardButton(callback_data='admin_panel', text='▫️ 🔙 Back to Admin')))), supergroup_chat_created=False, text='👥 **User Management**')), update_id=494417192) caused error 'user_id'
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_application.py", line 1311, in process_update
+    await coroutine
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/conversationhandler.py", line 842, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/admin/user_management.py", line 83, in view_user
+    await _get_user_display_text(user_id),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/admin/user_management.py", line 41, in _get_user_display_text
+    f"ID: {user['user_id']}\n"
+           ~~~~^^^^^^^^^^^
+KeyError: 'user_id'
+2025-08-29 15:23:48,425 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:23:50,310 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:50,649 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:23:52,203 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:52,533 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:23:52,533 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=my_dashboard
+2025-08-29 15:23:52,883 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:23:55,543 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:23:55,678 - froxtbot.settings - ERROR - Update Update(callback_query=CallbackQuery(chat_instance='4368579571786063283', data='buy_credits', from_user=User(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, is_bot=False, language_code='en', username='MeXCode'), id='6032045948286211946', message=Message(channel_chat_created=False, chat=Chat(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, type=<ChatType.PRIVATE>, username='MeXCode'), date=datetime.datetime(2025, 8, 29, 15, 23, 50, tzinfo=datetime.timezone.utc), delete_chat_photo=False, edit_date=datetime.datetime(2025, 8, 29, 15, 23, 52, tzinfo=datetime.timezone.utc), from_user=User(first_name='Baba X Tillu', id=8374407374, is_bot=True, username='BabaXTilluBot'), group_chat_created=False, message_id=88, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='buy_credits', text='✅ 💳 Buy Credits'), InlineKeyboardButton(callback_data='refer_earn', text='ℹ️ 🎁 Refer Friends')), (InlineKeyboardButton(callback_data='usage_history', text='ℹ️ 📊 Usage History'), InlineKeyboardButton(callback_data='achievements', text='💎 🏆 Achievements')), (InlineKeyboardButton(callback_data='user_exclusion_management', text='🔥 🚫 My Exclusions'),), (InlineKeyboardButton(callback_data='back_to_menu', text='▫️ 🔙 Back to Menu'),))), supergroup_chat_created=False, text='📊 Your Dashboard\n\n💎 Credits Balance: 2.0\n📈 Total Requests: 0\n📅 Daily Requests: 0\n👥 Referrals: 0\n\n📈 Statistics:\n• 📅 Member since: August 29, 2025\n• ⏳ Days active: 1\n• 📊 Avg requests/day: 0.0\n• 🎫 Tier: Free\n\n💡 Tip: Refer friends to earn bonus credits!')), update_id=494417195) caused error httpx.ReadError: 
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_application.py", line 1311, in process_update
+    await coroutine
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/common.py", line 298, in button_handler
+    await query.answer()
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_callbackquery.py", line 187, in answer
+    return await self.get_bot().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 960, in answer_callback_query
+    return await super().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 4191, in answer_callback_query
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 297, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2025-08-29 15:23:56,574 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:24:05,679 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:24:11,045 - froxtbot.settings - INFO - 🛑 Bot stopped by user
+2025-08-29 15:33:35,437 - froxtbot.settings - INFO - 🚀 🔍FroxtXOSINT Bot v2.2 starting...
+2025-08-29 15:33:35,437 - froxtbot.settings - INFO - 👑 Admin IDs: [6792765047, 7846896084]
+2025-08-29 15:33:35,437 - froxtbot.settings - INFO - 🔒 Force join channels: ['@yufqxwuyGEN', 'TeamXcodex']
+2025-08-29 15:33:35,437 - froxtbot.settings - INFO - ⚡ Enhanced with pagination and improved error handling
+2025-08-29 15:33:35,437 - froxtbot.settings - INFO - 🛠️ Available tools: 19
+2025-08-29 15:33:35,437 - froxtbot.settings - INFO - 🔬 New tool: Deep Mobile Scan
+2025-08-29 15:33:35,438 - froxtbot.settings - INFO - 📄 Enhanced: Result pagination and file export
+2025-08-29 15:33:35,438 - froxtbot.settings - INFO - 💎 Credit system: Most tools free, Deep Scan premium
+2025-08-29 15:33:36,129 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getMe "HTTP/1.1 200 OK"
+2025-08-29 15:33:36,130 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-29 15:33:36,130 - telegram.ext.Application - INFO - Application started
+2025-08-29 15:33:36,275 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/deleteWebhook "HTTP/1.1 200 OK"
+2025-08-29 15:33:46,925 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:33:57,058 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:07,192 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:17,325 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:17,459 - telegram.ext.Updater - ERROR - Exception happened while polling for updates.
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 115, in network_retry_loop
+    if not await do_action():
+           ^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_utils/networkloop.py", line 108, in do_action
+    return action_cb_task.result()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_updater.py", line 340, in polling_action_cb
+    updates = await self.bot.get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 670, in get_updates
+    updates = await super().get_updates(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 4611, in get_updates
+    await self._post(
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 297, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2025-08-29 15:34:25,744 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:26,645 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:34:28,139 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:28,465 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:34:28,465 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=osint_tools
+2025-08-29 15:34:28,822 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:34:31,700 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:31,839 - froxtbot.settings - ERROR - Update Update(callback_query=CallbackQuery(chat_instance='4368579571786063283', data='tool_email', from_user=User(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, is_bot=False, language_code='en', username='MeXCode'), id='6032045949153368248', message=Message(channel_chat_created=False, chat=Chat(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, type=<ChatType.PRIVATE>, username='MeXCode'), date=datetime.datetime(2025, 8, 29, 15, 34, 26, tzinfo=datetime.timezone.utc), delete_chat_photo=False, edit_date=datetime.datetime(2025, 8, 29, 15, 34, 28, tzinfo=datetime.timezone.utc), from_user=User(first_name='Baba X Tillu', id=8374407374, is_bot=True, username='BabaXTilluBot'), group_chat_created=False, message_id=91, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='tool_mobile', text='🔹 📱 Mobile Lookup'), InlineKeyboardButton(callback_data='tool_email', text='🔹 📧 Email Lookup')), (InlineKeyboardButton(callback_data='tool_aadhar', text='⚠️ 🆔 Aadhar Search'), InlineKeyboardButton(callback_data='upi_services', text='✅ 💰 UPI Services')), (InlineKeyboardButton(callback_data='tool_username_scan', text='ℹ️ 🌐 Username Scan'), InlineKeyboardButton(callback_data='tool_password_analyze', text='⚠️ 🔑 Password Analyze')), (InlineKeyboardButton(callback_data='tool_car_lookup', text='ℹ️ 🚗 Vehicle Lookup'), InlineKeyboardButton(callback_data='tool_bike_info', text='ℹ️ 🏍️ Bike Info')), (InlineKeyboardButton(callback_data='tool_ip_scan', text='▫️ 🌐 IP Scanner'), InlineKeyboardButton(callback_data='tool_full_scan', text='▫️ 🔍 Full Scan')), (InlineKeyboardButton(callback_data='tool_deep_scan', text='💎 🔬 Deep Scan'), InlineKeyboardButton(callback_data='tool_voterid', text='ℹ️ 🗳️ Voter ID')), (InlineKeyboardButton(callback_data='tool_fam_pay', text='ℹ️ 💳 FamPay Info'), InlineKeyboardButton(callback_data='tool_ration_card', text='ℹ️ 🍞 Ration Card')), (InlineKeyboardButton(callback_data='tool_vehicle_info', text='ℹ️ 🚙 Vehicle Info'), InlineKeyboardButton(callback_data='tool_breach_check', text='⚠️ 🔓 Breach Check')), (InlineKeyboardButton(callback_data='back_to_menu', text='▫️ 🔙 Back to Menu'),))), supergroup_chat_created=False, text='🛠️ OSINT Tools Menu\n\nSelect a tool to use:\n\n🆓 Free Tools: Mobile, Email, Aadhar, UPI, Username, Password, IP, Full Scan, Bike, Voter ID, FamPay, Ration, Vehicle Info, Breach Check\n💎 Premium Tools: Deep Scan (5 credits)')), update_id=494417198) caused error httpx.ReadError: 
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 136, in handle_async_request
+    raise exc
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_async/http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_backends/anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codex/codex/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 273, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+  File "/usr/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/home/codex/codex/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_application.py", line 1311, in process_update
+    await coroutine
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/common.py", line 298, in button_handler
+    await query.answer()
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_callbackquery.py", line 187, in answer
+    return await self.get_bot().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 960, in answer_callback_query
+    return await super().answer_callback_query(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 4191, in answer_callback_query
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 698, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_extbot.py", line 370, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/_bot.py", line 727, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 197, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_baserequest.py", line 304, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/request/_httpxrequest.py", line 297, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ReadError: 
+2025-08-29 15:34:32,723 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:34:36,098 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:36,435 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:34:36,435 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=tool_car_lookup
+2025-08-29 15:34:36,799 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:34:39,409 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:39,756 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:34:43,548 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:43,870 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:34:43,871 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=my_dashboard
+2025-08-29 15:34:44,213 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:34:45,664 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:45,985 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:34:45,985 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=back_to_menu
+2025-08-29 15:34:46,320 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:34:48,389 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:48,712 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:34:48,712 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=buy_credits
+2025-08-29 15:34:49,048 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:34:53,828 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:54,171 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:34:54,516 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:34:57,888 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:34:58,242 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:35:01,322 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:01,647 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:01,653 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=news_updates
+2025-08-29 15:35:01,997 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:35:04,507 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:04,831 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:04,834 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=back_to_menu
+2025-08-29 15:35:05,226 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:35:07,776 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:08,124 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:08,124 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=admin_panel
+2025-08-29 15:35:08,588 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:35:10,461 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:10,782 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:10,783 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=admin_settings
+2025-08-29 15:35:11,121 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:35:13,686 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:14,029 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:14,029 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=admin_settings
+2025-08-29 15:35:14,382 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:35:15,537 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:15,951 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:15,951 - froxtbot.settings - INFO - Button pressed: user=7846896084, data=admin_credits
+2025-08-29 15:35:16,319 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:35:18,123 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:18,469 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:18,812 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/editMessageText "HTTP/1.1 200 OK"
+2025-08-29 15:35:20,322 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/getUpdates "HTTP/1.1 200 OK"
+2025-08-29 15:35:20,646 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/answerCallbackQuery "HTTP/1.1 200 OK"
+2025-08-29 15:35:20,647 - froxtbot.settings - ERROR - Update Update(callback_query=CallbackQuery(chat_instance='4368579571786063283', data='admin_user_select_7846896084', from_user=User(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, is_bot=False, language_code='en', username='MeXCode'), id='6032045945537411200', message=Message(channel_chat_created=False, chat=Chat(first_name='ㅤㅤㅤㅤㅤㅤ🐣', id=7846896084, type=<ChatType.PRIVATE>, username='MeXCode'), date=datetime.datetime(2025, 8, 29, 15, 34, 58, tzinfo=datetime.timezone.utc), delete_chat_photo=False, edit_date=datetime.datetime(2025, 8, 29, 15, 35, 18, tzinfo=datetime.timezone.utc), from_user=User(first_name='Baba X Tillu', id=8374407374, is_bot=True, username='BabaXTilluBot'), group_chat_created=False, message_id=96, reply_markup=InlineKeyboardMarkup(inline_keyboard=((InlineKeyboardButton(callback_data='admin_user_select_7846896084', text='ℹ️ 🟢 MeXCode (Free User)'),), (InlineKeyboardButton(callback_data='noop', text='ℹ️ 1/1'),), (InlineKeyboardButton(callback_data='admin_user_search', text='🔹 🔍 Search User'), InlineKeyboardButton(callback_data='admin_panel', text='▫️ 🔙 Back to Admin')))), supergroup_chat_created=False, text='👥 **User Management**')), update_id=494417213) caused error 'user_id'
+Traceback (most recent call last):
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_application.py", line 1311, in process_update
+    await coroutine
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/conversationhandler.py", line 842, in handle_update
+    new_state: object = await handler.handle_update(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/codex/lib/python3.12/site-packages/telegram/ext/_handlers/basehandler.py", line 158, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/admin/user_management.py", line 83, in view_user
+    await _get_user_display_text(user_id),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codex/froxt/froxtbot/handlers/admin/user_management.py", line 41, in _get_user_display_text
+    f"ID: {user['user_id']}\n"
+           ~~~~^^^^^^^^^^^
+KeyError: 'user_id'
+2025-08-29 15:35:20,992 - httpx - INFO - HTTP Request: POST https://api.telegram.org/bot8374407374:AAG420w3D7vl-kpzboXkDVjqrEFZbs0hjfU/sendMessage "HTTP/1.1 200 OK"
+2025-08-29 15:35:26,586 - froxtbot.settings - INFO - 🛑 Bot stopped by user

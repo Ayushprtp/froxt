@@ -494,5 +494,4 @@ exclusion_management_conversation = ConversationHandler(
     map_to_parent={
         ConversationHandler.END: "admin_panel" # Return to admin panel after conversation ends
     },
-    per_message=True,
 )

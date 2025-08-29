@@ -708,5 +708,4 @@ user_exclusion_management_conversation = ConversationHandler(
     map_to_parent={
         ConversationHandler.END: "user_dashboard" # Or wherever the user should return
     },
-    per_message=True,
 )
