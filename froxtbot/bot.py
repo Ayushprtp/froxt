@@ -53,11 +53,27 @@ class CommandMockMessage:
         self.message_id = 1 # A placeholder for message_id
 
     async def reply_text(self, text, reply_markup=None, parse_mode=None):
-        await self.chat.send_message(text=text, reply_markup=reply_markup, parse_mode=parse_mode)
+        # Store the message ID of the sent message
+        sent_message = await self.chat.send_message(text=text, reply_markup=reply_markup, parse_mode=parse_mode)
+        self.message_id = sent_message.message_id
+        return sent_message
 
     async def edit_text(self, text, reply_markup=None, parse_mode=None):
         # When called from a command, edit_message_text should act like reply_text
-        await self.reply_text(text, reply_markup=reply_markup, parse_mode=parse_mode)
+        # But we need to use the stored message_id if available
+        if hasattr(self, 'message_id') and self.message_id:
+            try:
+                return await self.chat.edit_message_text(
+                    message_id=self.message_id,
+                    text=text,
+                    reply_markup=reply_markup,
+                    parse_mode=parse_mode
+                )
+            except:
+                # If editing fails, send a new message
+                return await self.reply_text(text, reply_markup=reply_markup, parse_mode=parse_mode)
+        else:
+            return await self.reply_text(text, reply_markup=reply_markup, parse_mode=parse_mode)
 
 class CommandMockQuery:
     def __init__(self, chat, from_user, tool_name=""):
@@ -71,7 +87,7 @@ class CommandMockQuery:
         pass
 
     async def edit_message_text(self, text, reply_markup=None, parse_mode=None):
-        await self.message.edit_text(text, reply_markup=reply_markup, parse_mode=parse_mode)
+        return await self.message.edit_text(text, reply_markup=reply_markup, parse_mode=parse_mode)
 
 class CommandMockUpdate:
     def __init__(self, chat, from_user, text=""):

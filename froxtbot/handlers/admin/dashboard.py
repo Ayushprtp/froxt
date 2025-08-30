@@ -22,7 +22,6 @@ async def show_admin_panel(query) -> None:
     admin_menu = [
         [
             {"text": "👥 User Management", "callback_data": "admin_users", "style": "info"},
-            {"text": "💎 Credit Management", "callback_data": "admin_credits", "style": "premium"},
         ],
         [
             {"text": "📊 Analytics", "callback_data": "admin_analytics", "style": "success"},
@@ -30,14 +29,11 @@ async def show_admin_panel(query) -> None:
         ],
         [
             {"text": "📢 Broadcast", "callback_data": "broadcast_new", "style": "danger"}, # Changed to broadcast_new to start conversation
-            {"text": "💾 Export Data", "callback_data": "admin_export", "style": "info"},
         ],
         [
-            {"text": "🛡️ Security Center", "callback_data": "admin_security_center", "style": "warning"},
             {"text": "🔧 Maintenance", "callback_data": "admin_maintenance", "style": "warning"},
         ],
         [
-            {"text": "🔌 API Configuration", "callback_data": "admin_api_config", "style": "info"},
             {"text": "🚫 Exclusion Management", "callback_data": "admin_exclusion_management", "style": "danger"},
         ],
         [
@@ -60,12 +56,9 @@ async def show_admin_panel(query) -> None:
         f"• 📈 Success Rate: {success_rate:.1f}%\n\n"
         "🎯 Admin Features:\n"
         "• 👥 Complete User Management\n"
-        "• 💰 Credit Control System\n"
         "• 📊 Live Analytics Dashboard\n"
         "• ⚙️ Full System Configuration\n"
-        "• 🛡️ Security & Monitoring\n"
         "• 🔧 Maintenance Tools\n"
-        "• 🔌 API Configuration\n\n"
         f"🕐 Last Updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
     )
 
