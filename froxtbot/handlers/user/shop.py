@@ -7,7 +7,7 @@ from ...database.db_exclusions import ExclusionManager
 from ...utils.keyboards import create_keyboard # Assuming this is the correct import for your keyboard utility
 
 async def show_buy_credits(query):
-    """Show credit purchase options"""
+    """Show credit purchase options with new layout"""
     categorized_items = await db_shop.get_all_shop_items()
     
     if not categorized_items["ZC Pack"] and not categorized_items["Membership"]:
@@ -15,19 +15,57 @@ async def show_buy_credits(query):
         return
 
     buttons = []
+    
+    # First column: ZC Packs
+    zc_pack_buttons = []
     if categorized_items["ZC Pack"]:
-        buttons.append([{"text": "💰 Credit Packs", "callback_data": "shop_category_credits", "style": "info"}])
+        zc_pack_buttons.append([{"text": "💰 ZC Packs", "callback_data": "noop", "style": "info"}])
+        for item in categorized_items["ZC Pack"][:3]:  # Show only first 3 ZC packs
+            price_str = f"₹{item['price_inr']:.2f}" if item['price_inr'] is not None else "Not Set"
+            zc_pack_buttons.append([
+                {"text": f"💎 {item['name']} - {price_str}",
+                 "callback_data": f"user_shop_select_{item['item_id']}",
+                 "style": "premium"}
+            ])
+    
+    # Second column: Memberships
+    membership_buttons = []
     if categorized_items["Membership"]:
-        buttons.append([{"text": "👑 Memberships", "callback_data": "shop_category_membership", "style": "info"}])
+        membership_buttons.append([{"text": "👑 Memberships", "callback_data": "noop", "style": "info"}])
+        for item in categorized_items["Membership"][:3]:  # Show only first 3 memberships
+            membership_buttons.append([
+                {"text": f"⭐ {item['name']}",
+                 "callback_data": f"user_shop_select_{item['item_id']}",
+                 "style": "success"}
+            ])
+    
+    # Combine columns
+    max_rows = max(len(zc_pack_buttons), len(membership_buttons))
+    for i in range(max_rows):
+        row = []
+        if i < len(zc_pack_buttons):
+            row.extend(zc_pack_buttons[i])
+        else:
+            # Add empty button to maintain alignment
+            row.append({"text": " ", "callback_data": "noop", "style": "secondary"})
+            
+        if i < len(membership_buttons):
+            row.extend(membership_buttons[i])
+        buttons.append(row)
+    
+    # Add Exclusion Slot purchase button
     if categorized_items["Exclusion Slot"]:
-        buttons.append([{"text": "🚫 Exclusion Slots", "callback_data": "shop_category_exclusion_slot", "style": "danger"}])
-
+        buttons.append([
+            {"text": "🚫 Purchase Exclusion Slot", "callback_data": f"user_shop_select_{categorized_items['Exclusion Slot'][0]['item_id']}", "style": "danger"}
+        ])
+    
+    # Add back button
     buttons.append([
         {"text": "🔙 Back to Menu", "callback_data": "back_to_menu", "style": "secondary"}
     ])
 
     await query.edit_message_text(
-        text="🛍️ **Welcome to the Shop!**\n\nSelect a category to browse items.",
+        text="🛍️ **Welcome to the Shop!**\n\nSelect an item to purchase.",
         reply_markup=create_keyboard(buttons)
     )
 

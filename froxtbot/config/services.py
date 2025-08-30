@@ -15,7 +15,7 @@ from typing import Dict, Any
 SERVICES_CONFIG: Dict[str, Dict[str, Any]] = {
     "mobile": {
         "servicename": "Mobile Lookup",
-        "servicecost": 0,
+        "servicecost": 10,
         "servicebeautify": "📱 Mobile Lookup",
         "serviceapi": "https://numinfoapi.zerovault.workers.dev/search/mobile?key=codex&value=",
         "cmdalias": "mobile",
